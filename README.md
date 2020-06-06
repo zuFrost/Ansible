@@ -1,1 +1,3 @@
-# Ansible-install-Ubuntu-and-CentOS
+# Ansible
+## install Ansible on Ubuntu-16 and CentOS-7
+## install Ansible on Amazon Linux via PIP
