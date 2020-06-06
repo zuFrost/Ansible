@@ -1,0 +1,71 @@
+10.100.1.1
+10.100.1.2
+
+[staging_DB]
+192.168.1.1
+192.168.1.2
+
+[staging_WEB]
+192.168.2.1
+192.168.2.2
+
+[staging_APP]
+192.168.3.1
+192.168.3.2
+
+[staging_ALL:children]
+staging_DB
+staging_WEB
+staging_APP
+
+
+[prod_DB]
+10.10.1.1
+
+[prod_WEB]
+10.10.2.2
+
+[prod_APP]
+10.10.3.3
+
+[prod_ALL:children]
+prod_DB
+prod_WEB
+prod_APP
+
+[DB_ALL:children]
+staging_DB
+prod_DB
+
+[APP_ALL:children]
+staging_APP
+prod_APP
+
+[RAZNOE:children]
+APP_ALL
+DB_ALL
+
+[RAZNOE:vars]
+message=Hello
+
+
+[prod_servers]
+linux1 ansible_host=54.93.114.57    
+linux2 ansible_host=18.156.166.210 
+
+[prod_servers:vars]
+ansible_user=ec2-user
+ansible_ssh_private_key_file=/home/ec2-user/.ssh/frankfurt-key1.pem
+
+[staging_servers]
+linux3 ansible_host=54.93.189.77   ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/.ssh/frankfurt-key2.pem
+
+[windows_servers]
+windows2016 ansible_host=18.185.104.160
+windows2019 ansible_host=18.156.191.131
+
+[windows_servers:vars]
+ansible_user = Administrator
+ansible_port=5986
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
