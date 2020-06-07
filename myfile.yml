@@ -1,0 +1,35 @@
+ ---
+
+ - fruits:
+    - apple
+    - orange
+    - mango
+
+ - vegetables:
+    - carrots
+    - cucumber
+
+ - vasya:
+       nick: vasek
+       position: developer
+       skills:
+          - python
+          - perl
+          - php
+
+ - petya:
+       nick: "pettya: krytoy"
+       position: manager
+       skills:
+          - manage
+          - make_nose
+
+
+
+ - kolya: { nick: kolyan, position: administrator, skills: ['killer', 'cleaner']}
+
+ fruits: ['apple', 'orange', 'mango']
+
+
+
+	
