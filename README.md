@@ -68,4 +68,6 @@ tree
 
 ![Install Apache and Upload my Web Page. Reload Apache when Web Page changed](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook3.yml)
 
+## 10. Ansible - Playbook Variables Debag Set_fact Register
+![Playbook Variables Debag Set_fact Register](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook_Variables_Debag_Set_fact_Register.yml)
 
