@@ -1,16 +1,16 @@
 # Ansible
-## install Ansible on Ubuntu-16 and CentOS-7
+## 1. install Ansible on Ubuntu-16 and CentOS-7
 ![install Ansible on Ubuntu-16 and CentOS-7](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20CentOS.jpg)
 ![install Ansible on Ubuntu-16 and CentOS-7](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20Ubuntu.jpg)
-## install Ansible on Amazon Linux via PIP
+## 2. install Ansible on Amazon Linux via PIP
 ![install Ansible on Amazon Linux via PIP](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20on%20Amazon%20Linux%20via%20PIP.jpg)
-## Ansible connect to Amazon Linux Clients
+## 3. Ansible connect to Amazon Linux Clients
 ![Ansible connect to Amazon Linux Clients](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/Ansible%20connect%20to%20Amazon%20Linux%20Clients.jpg)
-## Ansible connect to Amazon Windows Clients
+## 4. Ansible connect to Amazon Windows Clients
 ![Ansible connect to Amazon Windows Clients](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/Ansible%20connect%20to%20Amazon%20Windows%20Clients.jpg)
-## Create example Ansible Inventory file 
+## 5. Create example Ansible Inventory file 
 ![hosts.txt](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/hosts.txt)
-## Ansible. Runing Ad-Hoc commands
+## 6. Ansible. Runing Ad-Hoc commands
 
 
 
@@ -43,14 +43,19 @@ ansible-doc -l | grep ec2
 
 
 
-## Ansible - Правила Формата YAML
+##7. Ansible - Правила Формата YAML
 ![myfile.yml](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/myfile.yml)
 
 
-## Ansible - Перенос переменных из Inventory файла hosts.txt в group_vars/
+##8. Ansible - Перенос переменных из Inventory файла hosts.txt в group_vars/
 ![hosts.txt](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/ansible/hosts.txt)
 ![group_vars директория](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/tree/master/ansible/group_vars) содержащая файлы с переменными ![ALL_SERVERS_DB](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/ansible/group_vars/ALL_SERVERS_DB) [PROD_SERVERS_WEB](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/ansible/group_vars/PROD_SERVERS_WEB) [STAGING_SERVERS_WEB](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/ansible/group_vars/STAGING_SERVERS_WEB) 
 результат проверяем коммандами:
 ansible-inventory --list и tree
+
+##9. Ansible - Playbooks
+![Test Connection to my servers](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook1.yml)
+![Install default Apache Web Server](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook2.yml)
+![Install Apache and Upload my Web Page. Reload Apache when Web Page changed](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook3.yml)
 
 
