@@ -55,7 +55,9 @@ ansible-inventory --list и tree
 
 ## 9. Ansible - Playbooks
 ![Test Connection to my servers](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook1.yml)
+
 ![Install default Apache Web Server](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook2.yml)
+
 ![Install Apache and Upload my Web Page. Reload Apache when Web Page changed](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook3.yml)
 
 
