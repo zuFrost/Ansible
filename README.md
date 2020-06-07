@@ -71,3 +71,5 @@ tree
 ## 10. Ansible - Playbook Variables Debag Set_fact Register
 ![Playbook Variables Debag Set_fact Register](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook_Variables_Debag_Set_fact_Register.yml)
 
+## 12. Ansible - Блоки и Условия – Block-When
+![Playbook Block-When](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook5.yml)
