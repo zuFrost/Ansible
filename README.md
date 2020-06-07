@@ -40,3 +40,9 @@ ansible all -m yum -a "name=httpd state=removed" -b
 ansible staging_servers -m shell -a "ls /var" -vvv
 ### встроенный справочник
 ansible-doc -l | grep ec2
+
+
+
+## Ansible - Правила Формата YAML
+![myfile.yml](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/myfile.yml)
+
