@@ -1,0 +1,42 @@
+---
+- name: My Playbook for Variables Lesson
+  hosts: all
+  become: yes
+
+
+  vars:
+    message1: Privet
+    message2: World
+    secret  : LKSDFLHGHROGHERGVFWIBRFRGER
+
+  tasks:
+
+  - name: Print Secret variable
+    debug:
+      var: secret
+
+  - debug: 
+      msg: "Secret word: {{ secret }}"
+
+
+  - debug:
+      msg: "Owner by this Server --> {{ owner }} <--"
+
+  - set_fact: full_message="{{ message1 }} {{ message2 }} from {{ owner}}"
+
+  - debug:
+      var: full_message
+
+  - debug:
+      var: ansible_distribution
+
+  - debug:
+      var: ansible_lo.ipv4.address
+
+  - shell: uptime
+    register: results
+
+  - debug:
+      var: results.stdout
+
+ 
