@@ -79,3 +79,6 @@ tree
 ![Playbook simple loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbookloop.yml)
 <br>
 ![Playbook upload many files with loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook6.yml)
+ ## 14. 14 Ansible - Шаблоны - Jinja Template
+![Playbook upload many files Jinja template](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook7.yml)
+ 
