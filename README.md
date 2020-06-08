@@ -76,4 +76,5 @@ tree
 
 ## 13. Ansible - Циклы – Loop, With_Items, Until, With_fileglob
 ![Playbook simple loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbookloop.yml)
+<br>
 ![Playbook upload many files with loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook6.yml)
