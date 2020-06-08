@@ -81,4 +81,6 @@ tree
 ![Playbook upload many files with loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook6.yml)
  ## 14. Ansible - Шаблоны - Jinja Template
 ![Playbook upload many files Jinja template](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook7.yml)
- 
+ ## 15. Ansible - Создание Ролей - Roles
+![roles/deploy_apache_web](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/tree/master/ansible/MyWebSite2/roles/deploy_apache_web)
+
