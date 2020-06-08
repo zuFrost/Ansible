@@ -1,0 +1,37 @@
+---
+- name: Loops Playbook
+  hosts: linux3
+  become: yes
+
+  tasks:
+  -  name: Say Hello to All
+     debug: msg="Hello {{ item }}"
+#    with_items:
+     loop:
+        - "Vasia"
+        - "Petya"
+        - "Masha" 
+        - "Olya"
+
+  -  name: Loop Until example
+     shell: echo -n Z >> myfile.txt && cat myfile.txt
+     register: output
+     delay: 2
+     retries: 10
+     until:  output.stdout.find("ZZZZ") == false
+
+  -  name: Print Final Output
+     debug:
+       var: output.stdout
+
+
+#  - name: Install mane packages
+#    yum: name={{  }} state=installed
+##   loop:
+#    with_items:
+#          - python
+#          - tree
+#          - mysql-client
+#          - httpd
+
+
