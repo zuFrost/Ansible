@@ -73,3 +73,7 @@ tree
 
 ## 12. Ansible - Блоки и Условия – Block-When
 ![Playbook Block-When](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook5.yml)
+
+## 13. Ansible - Циклы – Loop, With_Items, Until, With_fileglob
+![Playbook simple loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbookloop.yml)
+![Playbook upload many files with loop](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook6.yml)
