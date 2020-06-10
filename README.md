@@ -105,9 +105,9 @@ playbook вызываем с дополнительными переменным
 <br>
   - include: create_folders.yml<br>
   - include: create_files.yml mytext="Privet ot KRD RUS"<br>
-![Основной playbook7_includes.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook7_includes.yml)<br>
-![подключаемый create_files.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_files.yml)<br>
-![Основной create_folders.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_folders.yml)<br>
+![Основной playbook7_includes.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook7_includes.yml) <br>
+![подключаемый create_files.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_files.yml) <br>
+![Основной create_folders.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_folders.yml) <br>
   
   
 
