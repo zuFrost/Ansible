@@ -93,15 +93,15 @@ playbook вызываем с дополнительными переменным
 ![playbook с использованием внешних переменных](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook-extra-var.yml)
 ## 17. Ansible - Использование Import, Include
   tasks:<br>
-  - name: Ping test<br>
+  /- name: Ping test<br>
     ping:<br>
 
-  - include: create_folders.yml<br>
-  - include: create_files.yml mytext="Privet ot KRD RUS"<br>
+  /- include: create_folders.yml<br>
+  /- include: create_files.yml mytext="Privet ot KRD RUS"<br>
   
  ![Основной playbook7 includes](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook7_includes.yml) <br>
- ![подключаемый create files](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_files.yml) 
- ![подключаемый create folders](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_folders.yml) 
+ ![подключаемый create files](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_files.yml) <br>
+ ![подключаемый create folders](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_folders.yml) <br>
 
   
   
