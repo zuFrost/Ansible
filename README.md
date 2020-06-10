@@ -84,3 +84,7 @@ tree
  ## 15. Ansible - Создание Ролей - Roles
 ![roles/deploy_apache_web](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/tree/master/ansible/MyWebSite2/roles/deploy_apache_web)
 ## 16. Ansible - Внешние переменные - extra-vars
+В playbook объявляем переменную hosts: "{{ MYHOSTS }}" <be>
+playboor вызываем с дополнительными переменными переменной ansible-playbook playbook6.yml --extra-var "MYHOSTS=PROD owner=Alex"
+![playbook с использованием внешних переменных](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook-extra-var.yml)
+
