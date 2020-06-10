@@ -86,5 +86,9 @@ tree
 ## 16. Ansible - Внешние переменные - extra-vars
 В playbook объявляем переменную hosts: "{{ MYHOSTS }}" <br>
 playbook вызываем с дополнительными переменными переменной ansible-playbook playbook6.yml --extra-var "MYHOSTS=PROD owner=Alex"<br>
+возможны параметры:<br> 
+--extra-var <br>
+--extra-vars <br>
+-e <br>
 ![playbook с использованием внешних переменных](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook-extra-var.yml)
 
