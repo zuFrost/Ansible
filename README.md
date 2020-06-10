@@ -102,3 +102,11 @@ playbook вызываем с дополнительными переменным
  ![Основной playbook7_includes.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook7_includes.yml) <br>
  ![подключаемый create_files.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_files.yml) <br>
  ![подключаемый  create_folders.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/create_folders.yml) <br>
+ ## 18. Ansible - Перенаправление выполнения Task из Playbook на определённый сервер - delegate_to
+ команды:<br>
+ delegate_to: 127.0.0.1<br>
+ run_once: true<br>
+ ![playbook8_delegate.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook8_delegate.yml)<br>
+ 
+ 
+ 
