@@ -131,8 +131,8 @@ playbook вызываем с дополнительными переменным
  #### Зашифровать строку
  \$ ansible-vault encrypt_string
  \$ ansible-vault encrypt_string --stdin-name "Mypassword"<br>
- \$ echo -n "!#%#$SECRETWORD$@$" | ansible-vault encrypt_string
- полученную зашифрованную строку вставляем вместо пароля в playbook
+ \$ echo -n "!#%#$SECRETWORD$@$" | ansible-vault encrypt_string<br>
+ полученную зашифрованную строку вставляем вместо пароля в playbook<br>
 
 
  
