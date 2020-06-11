@@ -118,23 +118,16 @@ playbook вызываем с дополнительными переменным
  комманды:
  #### Создание
  ansible-vault create mysecret.txt<br>
- New Vault password:<br>
- Confirm New Vault password:
  #### Просмотр
  ansible-vault view mysecret.txt<br>
- Vault password:
  #### Редактирование
  ansible-vault edit mysecret.txt<br>
- Vault password:<br>
  #### Смена пароля
  ansible-vault rekey mysecret.txt<br>
- Vault password:<br>
- New Vault password:<br>
- Confirm New Vault password:<br>
  #### Зашифровать ранее созданный playbook
  ansible-vault encrypt playbook_vault.yml<br>
- New Vault password:<br>
- Confirm New Vault password:<br>
+ #### Расшифровка ранее зашифрованного файла (снятие пароля)
+ ansible-vault decrypt playbook_vault.yml<br>
 
  
 
