@@ -134,6 +134,7 @@ playbook вызываем с дополнительными переменным
  \$ echo -n "!#%#$SECRETWORD$@$" | ansible-vault encrypt_string<br>
  полученную зашифрованную строку вставляем вместо пароля в playbook<br>
  ![playbook_vault.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook_vault.yml)<br>
+ ## 21. Ansible - Dynamic Inventory AWS - Amazon Web Services - ec2.py
 
  
  
