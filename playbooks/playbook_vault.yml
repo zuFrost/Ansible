@@ -1,0 +1,27 @@
+---
+- name: Ansible Lesson 20 Vault
+  hosts: all
+  become: yes
+
+  vars:
+      admin_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          35636331623833386438353231643661363030306631633366366334383366376562306666386563
+          3762663431643630666662653763386163313163303838330a633465376634666632653937626663
+          35663736656132343764653730336461343565393161323435393265363661333031633139383438
+          3039666333376634300a396234323961356139336136353630313331616537373261376561393335
+          30663637656366333765356433323630656331356131306633396263373765616163
+
+  tasks:
+  - name: Install package Tree
+    yum: name=tree state=latest
+
+  - name: Create Config Files
+    copy:
+        dest: "/home/ec2-user/myconfig.conf"
+        content: |
+            port = 9092
+            log = 7days
+            home = /opt/kafka/bin/
+            user = admin
+            password= {{ admin_password }}
