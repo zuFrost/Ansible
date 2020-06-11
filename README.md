@@ -115,6 +115,18 @@ playbook вызываем с дополнительными переменным
  ignore_errors: yes<br>
  ![playbook_errorhandling.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook_errorhandling.yml)
  ## 20. Ansible - Хранение Секретов - ansible-vault
+ комманды:
+ #### Создание
+ ansible-vault create mysecret.txt<br>
+ New Vault password:<br>
+ Confirm New Vault password:
+ #### Просмотр
+ ansible-vault view mysecret.txt<br>
+ Vault password:
+ #### Редактирование
+ ansible-vault edit mysecret.txt<br>
+ Vault password:<br>
+
 
  
 
