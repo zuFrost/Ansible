@@ -126,6 +126,8 @@ playbook вызываем с дополнительными переменным
  \$ ansible-vault decrypt playbook_vault.yml<br>
  #### Запуск зашифрованного playbook
  \$ ansible-playbook playbook_vault.yml --ask-vault-pass
+ #### Запуск зашифрованного playbook без запроса пароля, с указанием файла, где хранится пароль
+ \$ ansible-playbook playbook_vault.yml --vault-password-file mypass.txt
  
 
  
