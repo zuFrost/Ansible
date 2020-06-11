@@ -107,6 +107,16 @@ playbook вызываем с дополнительными переменным
  delegate_to: 127.0.0.1<br>
  run_once: true<br>
  ![playbook8_delegate.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook8_delegate.yml)<br>
+ ## 19. Ansible - Перехват и Контроль ошибок
+ команды:<br>
+ any_errors_fatal: true <br>
+ failed_when: "'World' in results.stdout" <br>
+ failed_when: results.rc == 0 <br>
+ ignore_errors: yes<br>
+ ![playbook_errorhandling.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook_errorhandling.yml)
+
+ 
+
  
  
  
