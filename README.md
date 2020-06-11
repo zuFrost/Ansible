@@ -131,6 +131,10 @@ playbook вызываем с дополнительными переменным
  Vault password:<br>
  New Vault password:<br>
  Confirm New Vault password:<br>
+ #### Зашифровать ранее созданный playbook
+ ansible-vault encrypt playbook_vault.yml<br>
+ New Vault password:<br>
+ Confirm New Vault password:<br>
 
  
 
