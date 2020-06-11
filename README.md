@@ -3,7 +3,7 @@
 ![install Ansible on Ubuntu-16 and CentOS-7](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20CentOS.jpg)
 ![install Ansible on Ubuntu-16 and CentOS-7](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20Ubuntu.jpg)
 ## 2. install Ansible on Amazon Linux via PIP
-sudo pip install ansible
+\$ sudo pip install ansible
 ![install Ansible on Amazon Linux via PIP](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20on%20Amazon%20Linux%20via%20PIP.jpg)
 ## 3. Ansible connect to Amazon Linux Clients
 ![Ansible connect to Amazon Linux Clients](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/Ansible%20connect%20to%20Amazon%20Linux%20Clients.jpg)
@@ -13,36 +13,32 @@ sudo pip install ansible
 ![hosts.txt](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/hosts.txt)
 ## 6. Ansible. Runing Ad-Hoc commands
 
-
-
 ### 6.1 Запуск Ad-Hoc комманд
-ansible all -m shell -a "ls -ls /home"
+\$ ansible all -m shell -a "ls -ls /home"
             -m ping
             -m setup
 ### 6.2 Копирование с Мастера на все Ноды
-ansible prod_servers -m copy -a "src=privet.txt dest=/home mode=777" -b
+\$ ansible prod_servers -m copy -a "src=privet.txt dest=/home mode=777" -b
 ### 6.3 удаление файла на всех Нодах
 ansible all -m file -a "path=/home/privet.txt state=absent" -b
 ### 6.4 Загрузка файла с сайта
-ansible all -m get_url -a "url=https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20Ubuntu.jpg dest=/home" -b
+\$ ansible all -m get_url -a "url=https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20Ubuntu.jpg dest=/home" -b
 ### 6.5 Удаление файла
-ansible all -m file -a "path=/home/install%20ansible%20Ubuntu.jpg state=absent" -b
+\$ ansible all -m file -a "path=/home/install%20ansible%20Ubuntu.jpg state=absent" -b
 ### 6.6 Подключиться к сайту
-ansible all -m uri -a "url=http://www.adv-it.net"
+\$ ansible all -m uri -a "url=http://www.adv-it.net"
 ### 6.7 Подключиться к сайту и прочитать контент
-ansible all -m uri -a "url=http://www.adv-it.net return_content=yes"
+\$ ansible all -m uri -a "url=http://www.adv-it.net return_content=yes"
 ### 6.8 Установка httpd
-ansible all -m yum -a "name=httpd state=latest" -b
+\$ ansible all -m yum -a "name=httpd state=latest" -b
 ### 6.9 Запуск httpd и включение автозапуска при старте ОС
 ansible all -m service -a "name=httpd state=started enabled=yes" -b
 ### 6.10 Удаление httpd
-ansible all -m yum -a "name=httpd state=removed" -b
+\$ ansible all -m yum -a "name=httpd state=removed" -b
 ### 6.11 дебаггинг
-ansible staging_servers -m shell -a "ls /var" -vvv
+\$ ansible staging_servers -m shell -a "ls /var" -vvv
 ### 6.12 встроенный справочник
-ansible-doc -l | grep ec2
-
-
+\$ ansible-doc -l | grep ec2
 
 ## 7. Ansible - Правила Формата YAML
 ![myfile.yml](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/myfile.yml)
@@ -58,9 +54,9 @@ ansible-doc -l | grep ec2
 
 ![STAGING_SERVERS_WEB](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/ansible/group_vars/STAGING_SERVERS_WEB) 
 результат проверяем коммандами:
-ansible-inventory --list 
+\$ ansible-inventory --list 
 и
-tree
+\$ tree
 
 ## 9. Ansible - Playbooks
 ![Test Connection to my servers](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/playbooks/playbook1.yml)
@@ -117,18 +113,19 @@ playbook вызываем с дополнительными переменным
  ## 20. Ansible - Хранение Секретов - ansible-vault
  комманды:
  #### Создание
- ansible-vault create mysecret.txt<br>
+ \$ ansible-vault create mysecret.txt<br>
  #### Просмотр
- ansible-vault view mysecret.txt<br>
+ \$ ansible-vault view mysecret.txt<br>
  #### Редактирование
- ansible-vault edit mysecret.txt<br>
+ \$ ansible-vault edit mysecret.txt<br>
  #### Смена пароля
- ansible-vault rekey mysecret.txt<br>
+ \$ ansible-vault rekey mysecret.txt<br>
  #### Зашифровать ранее созданный playbook
- ansible-vault encrypt playbook_vault.yml<br>
+ \$ ansible-vault encrypt playbook_vault.yml<br>
  #### Расшифровка ранее зашифрованного файла (снятие пароля)
- ansible-vault decrypt playbook_vault.yml<br>
-
+ \$ ansible-vault decrypt playbook_vault.yml<br>
+ #### Запуск зашифрованного playbook
+ \$ ansible-playbook playbook_vault.yml --ask-vault-pass
  
 
  
