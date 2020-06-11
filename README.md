@@ -126,7 +126,11 @@ playbook вызываем с дополнительными переменным
  #### Редактирование
  ansible-vault edit mysecret.txt<br>
  Vault password:<br>
-
+ #### Смена пароля
+ ansible-vault rekey mysecret.txt<br>
+ Vault password:<br>
+ New Vault password:<br>
+ Confirm New Vault password:<br>
 
  
 
