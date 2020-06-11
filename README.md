@@ -114,6 +114,7 @@ playbook вызываем с дополнительными переменным
  failed_when: results.rc == 0 <br>
  ignore_errors: yes<br>
  ![playbook_errorhandling.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook_errorhandling.yml)
+ ## 20. Ansible - Хранение Секретов - ansible-vault
 
  
 
