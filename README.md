@@ -141,6 +141,13 @@ playbook вызываем с дополнительными переменным
  полученную зашифрованную строку вставляем вместо пароля в playbook<br>
  ![playbook_vault.yml](https://github.com/zuFrost/Ansible/blob/master/playbooks/playbook_vault.yml)<br>
  ## 21. Ansible - Dynamic Inventory AWS - Amazon Web Services - ec2.py
+ ![Inventory script example: AWS EC2](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html#inventory-script-example-aws-ec2) <br>
+ ![файлы локально](https://github.com/zuFrost/Ansible/tree/master/AWS%20EC2%20inventory) <br> 
+ export AWS_ACCESS_KEY_ID='AK123' <br>
+ export AWS_SECRET_ACCESS_KEY='abc123' <br>
+ \$ ec2.py --list <br>
+ \$ ec2.py --list --refresh-cache <br>
+
 
  
  
