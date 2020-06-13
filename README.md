@@ -7,6 +7,10 @@
 ## 2. install Ansible on Amazon Linux via PIP
 \$ sudo pip install ansible
 ![install Ansible on Amazon Linux via PIP](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/install%20ansible%20on%20Amazon%20Linux%20via%20PIP.jpg)
+\$ which ansible <br>
+/usr/local/bin/ansible <br>
+\$ ansible --version <br>
+ansible 2.9.9 <br>
 
 ## 3. Ansible connect to Amazon Linux Clients
 ![Ansible connect to Amazon Linux Clients](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/Ansible%20connect%20to%20Amazon%20Linux%20Clients.jpg)
