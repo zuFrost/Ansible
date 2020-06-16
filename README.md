@@ -22,6 +22,7 @@ ansible 2.9.9 <br>
 ![hosts.txt](https://github.com/zuFrost/Ansible-install-Ubuntu-and-CentOS/blob/master/hosts.txt)
 
 ## 6. Ansible. Runing Ad-Hoc commands
+\$ ansible-inventory --list<br>
 
 ### 6.1 Запуск Ad-Hoc комманд
 \$ ansible all -m shell -a "ls -ls /home"
