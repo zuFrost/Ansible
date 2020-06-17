@@ -10,3 +10,6 @@
   
   - name: Install application
     yum: name={{ app_name }} state=installed
+        
+#  - name: Start. And make autostart after reboot
+#    service: name={{ app_name }} state=started enabled=yes
