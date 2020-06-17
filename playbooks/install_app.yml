@@ -1,0 +1,12 @@
+---
+- name: Install application
+  hosts: all
+  become: yes
+
+  vars:
+    app_name: stress
+  
+  tasks:
+  
+  - name: Install application
+    yum: name={{ app_name }} state=installed
