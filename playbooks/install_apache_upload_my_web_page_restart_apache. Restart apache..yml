@@ -1,5 +1,5 @@
 ---
-- name: Install Apache and Upload my Web Page
+- name: Install Apache and Upload my Web Page. Restart apache.
   hosts: all
   become: yes
 
