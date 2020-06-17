@@ -1,0 +1,14 @@
+---
+- name: Show uptime by all servers
+  hosts: all
+  become: yes
+
+  tasks: 
+
+  - name: Show uptime
+    shell: name=uptime
+    
+  - set_fact: srv_uptime="working {{ ansible_uptime_seconds }} seconds"
+  
+  - debug:
+      var: srv_uptime
