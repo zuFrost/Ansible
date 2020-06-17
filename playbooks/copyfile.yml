@@ -1,0 +1,13 @@
+---
+- name: Copy file
+  hosts: all
+  become: yes
+
+  vars:
+    source_file: /home/ec2-user/ansible-repertory-master/environments/siso/sendfile.txt
+    destin_file: /home/ec2-user
+  
+  tasks:
+  
+  - name: copy file
+    copy: src={{ source_file }} dest={{ destin_file }} mode=777
