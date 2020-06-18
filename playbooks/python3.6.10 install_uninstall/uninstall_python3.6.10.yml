@@ -1,0 +1,63 @@
+---
+- name: Uninstall Python 3.6.10
+  hosts: all
+  become: yes
+
+  #vars:
+  #  install_file: /home/ec2-user/ansible-repertory-master/environments/siso/Python-3.6.10.tgz
+
+  tasks:
+  - name: Uninstall dependency for Python 3.6.10 sqlite-devel;
+    yum: name=sqlite-devel state=removed
+
+  - name: Uninstall dependency for Python 3.6.10 bzip2-devel
+    yum: name=bzip2-devel state=removed
+
+  - name: Uninstall dependency for Python 3.6.10 openssl-devel
+    yum: name=openssl-devel state=removed
+
+  - name: Uninstall dependency for Python 3.6.10 gcc
+    yum: name=gcc state=removed
+
+# remove all installed Python 3.6.10 files
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/python3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/python3.6m state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/python3.6m-config state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/pydoc3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/2to3-3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/easy_install-3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/idle3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/pip3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/bin
+    file: path=/usr/local/bin/pyvenv-3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/lib
+    file: path=/usr/local/lib/libpython3.6m.a state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/lib
+    file: path=/usr/local/lib/pkgconfig/python-3.6.pc state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/lib
+    file: path=/usr/local/lib/python3.6 state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/include
+    file: path=/usr/local/include/python3.6m state=absent
+
+  - name: delete Python 3.6.10 files in /usr/local/include
+    file: path=/usr/src/Python-3.6.10 state=absent

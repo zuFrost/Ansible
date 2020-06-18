@@ -1,0 +1,38 @@
+---
+#Install Python 3.6.10 als altinstall
+#OS tested: Amazon, RHLT8
+- name: Install Python 3.6.10
+  hosts: all
+  become: yes
+
+  vars:
+    install_file: /home/ec2-user/ansible-repertory-master/environments/siso/Python-3.6.10.tgz
+
+  tasks:
+  - name: Install dependency for Python 3.6.10 gcc; openssl-devel; bzip2-devel; sqlite-devel;
+    yum:
+      name:
+        - gcc
+        - openssl-devel
+        - bzip2-devel
+        - sqlite-devel
+        - make
+      state: installed
+
+  - name: Copy Python-3.6.10.tgz to /usr/src
+    copy: src={{ install_file }} dest=/usr/src
+
+  - name: Unarchive a Python-3.6.10.tgz file that is already on the remote machine
+    unarchive:
+        src: /usr/src/Python-3.6.10.tgz
+        dest: /usr/src/
+        remote_src: yes
+
+  - name: "/usr/src/Python-3.6.10/configure --enable-optimizations"
+    shell: /usr/src/Python-3.6.10/configure --enable-optimizations
+
+  - name:   make altinstall (ansible all -m make -a "chdir=/usr/src/Python-3.6.10 target=altinstall" -b)
+    shell: make altinstall /usr/src/Python-3.6.10
+
+  - name: delete /usr/src/Python-3.6.10.tgz
+    file: path=/usr/src/Python-3.6.10.tgz state=absent
