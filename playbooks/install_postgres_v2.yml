@@ -1,0 +1,11 @@
+---
+- name: Create a PostgreSQL DB server
+  hosts: siso_dbserver_rhel
+  sudo: yes
+  sudo_user: root
+  remote_user: ec2-user
+  vars_files:
+    - vars/main.yml
+
+  roles:
+  - createdb
