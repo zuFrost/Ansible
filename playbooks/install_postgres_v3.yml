@@ -1,0 +1,32 @@
+---
+- name: Install PostgreSQL
+  hosts: DB_SERVERS
+  become: yes
+
+  vars:
+      source_file:
+
+#https://www.postgresql.org/download/linux/redhat/
+  tasks:
+  - name: Install the repository RPM
+    dnf:
+      name: 'https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm'
+      state: present
+
+  - name: Disable the built-in PostgreSQL module
+    #dnf -qy module disable postgresql
+    #ansible DB_SERVERS -m shell -a "dnf -qy module disable postgresql warn=false" -b
+    shell: "dnf -qy module disable postgresql warn=false"
+
+  - name: Install PostgreSQL
+    dnf:
+      name: postgresql11-server
+      state: present
+
+
+
+
+# Optionally initialize the database and enable automatic start:
+#/usr/pgsql-11/bin/postgresql-11-setup initdb
+#systemctl enable postgresql-11
+#systemctl start postgresql-11
